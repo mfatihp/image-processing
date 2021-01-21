@@ -30,9 +30,10 @@ int main()
     cv::cvtColor(bg, bg, cv::COLOR_BGR2GRAY);
     cv::resize(bg, bg, cv::Size(400, 400));
 
+    // Define frame and frame_diff matrices
+    cv::Mat src, frame, frame_diff;
+
     while(1){
-        // Define frame and frame_diff matrices
-        cv::Mat src, frame, frame_diff;
 
         // Write capture to the frame
         cap >> frame;
